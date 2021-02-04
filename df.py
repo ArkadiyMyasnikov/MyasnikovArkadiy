@@ -22,7 +22,7 @@ class QuotLyMod(loader.Module):
         self._client = client
         self.me = await client.get_me()
 
-    async def quotlycmd(self, event):
+    async def qcmd(self, event):
         """.quotly <reply>"""
         user_msg = """{}""".format(utils.get_args_raw(event))
         reply_and_text = False
