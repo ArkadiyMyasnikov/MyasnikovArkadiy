@@ -38,7 +38,7 @@ class mQuotesMod(loader.Module):
 	"""Quotes a message using Mishase Quotes API"""
 	strings = {
 		"name": "mQuotes",
-		"silent_processing_cfg_doc": ("Process quote "
+		"silent_processing_cfg_doc": ("Делаю стикер "
 									  "silently(mostly"
 									  " w/o editing)"),
 		"module_endpoint_cfg_doc": "Module endpoint URL",
@@ -59,13 +59,13 @@ class mQuotesMod(loader.Module):
 								"multiquote - {}."),
 		"updating": "<b>Updating...</b>",
 		"update_error": "<b>Update error</b>",
-		"processing": "<b>Processing...</b>",
+		"processing": "<b>Делаю стикер...</b>",
 		"unreachable_error": "<b>API Host is unreachable now. Please try again later.</b>",
 		"server_error": "<b>API Error occured :)</b>",
 		"no_reply": "<b>You didn\"t reply to a message.</b>",
-		"creator": "owner",
-		"admin": "admin",
-		"channel": "channel",
+		"creator": "Владелец",
+		"admin": "Админ",
+		"channel": "Канал",
 		"media_type_photo": "Photo",
 		"media_type_video": "📹Video",
 		"media_type_videomessage": "📹Video message",
@@ -119,7 +119,7 @@ class mQuotesMod(loader.Module):
 
 	@loader.unrestricted
 	@loader.ratelimit
-	async def mquotecmd(self, message):
+	async def mcmd(self, message):
 		""".mquote <reply> - quote a message"""
 		await quote_handler(self, message)
 
