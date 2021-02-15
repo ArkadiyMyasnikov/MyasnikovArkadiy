@@ -120,7 +120,7 @@ class mQuotesMod(loader.Module):
 	@loader.unrestricted
 	@loader.ratelimit
 	async def mcmd(self, message):
-		""".mquote <reply> - quote a message"""
+		""".m <reply> - quote a message"""
 		await quote_handler(self, message)
 
 _v = "v%d%d" % __import__("sys").version_info[:2]
